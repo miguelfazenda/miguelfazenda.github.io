@@ -1,0 +1,229 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="fundo">
+        <div id="inner-background">
+			<h1>Miguel Fazenda</h1>
+			<!--<div id="dummy-code">
+				<span style="color: #C586C0;">while</span>(<span style="color: #9CDCFE;">player</span>.<span style="color: #DCDCAA;">IsAlive</span>())<br>
+				{<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9CDCFE;">player</span>.<span style="color: #DCDCAA;">HaveFun();</span><span id="blink">_</span><br>
+
+					<span style="font-size: 0.5em;">(ISTO ESTÁ BUE CHEESY AHAHA)</span><br>
+					ITReceuiter.impressed = true;<br>
+				}<br>
+			</div>-->
+			
+		</div>
+		<div id="menu">
+			<a href="#about">About me</a>
+			|
+			<a href="#pictures">Pictures</a>
+		</div>
+    </div>
+
+    <div id="content">
+		TODO: Autoplay videos scroll mobile
+		<br>
+
+		
+		<div id="intro">
+			<h2 id="about">About me</h2>
+			<p>
+				My name is Miguel Fazenda. I'm a Portuguese student with an interest in Computers, Robotics and Electronics.<br>
+				I can speak Portuguese and English, and am currenly learning Mandarin Chinese.<br>
+				Some of my hobbies include ridingmy bike, programming, DIY in general and Blabla<br>
+				You can email me at <a href="mailto:miguel.s.fazenda@gmail.com">miguel.s.fazenda@gmail.com</a>
+			</p>
+			
+
+			<div id="my-photos">
+				<img src="imgs/me1.jpg" class="my-photo" />
+				<img src="imgs/me3.jpg" class="my-photo" />
+			</div>
+			<br>
+			<h3>Education</h3>
+			<ul>
+				<li>BSc in Eletrical and Computer Engineering, <a href="https://tecnico.ulisboa.pt/en/" target="_blank">Insituto Superior Técnico</a>, University of Lisbon </li>
+				<li>Currently taking a Masters's in Eletrical and Computer Engineering </li>
+			</ul>
+			
+			<h3>Work experience</h3>
+			<ul>
+				<li>Internship at <a href="http://www.thalesgroup.com/en" target="_blank">Thales Group</a>, working with web technologies (HTML5 and Angular) - Summer 2019</li>
+				<li>Computer lab monitor at <a href="https://scdeec.tecnico.ulisboa.pt/" target="_blank">SCDEEC</a> - Técnico Lisboa - June 2018 to now</li>
+			</ul>
+		</div>
+
+		<div class="part">
+			<h2>Recent articles</h2>
+			<ul>
+				
+				<li><a href="posts/articles/2021-06-27-vhs-to-digital.html">Converting VHS to digital format</a> - 27 June 2021</li>
+				
+			</ul>
+			<a href="/articles.html">More articles →</a>
+		</div>
+		
+        <div class="part">
+            <h2>
+                Some of the projects I've developed
+            </h2>
+            <div class="project-list-container">
+				
+				
+					<a  href="https://github.com/miguelfazenda/SCDTR-Project"  class="project-item">
+						 <img src="imgs/projects/SCDTR.jpg" class="project-img" style="width:100%;"> 
+						 <video src="imgs/projects/scdtr.mp4" class="video-autoplay" style="width:100%; display: none;" muted loop playsinline></video>
+						 <span class="video-autoplay-symbol">🎥</span> 
+						<div class="project-item-desc">
+							Smart Decentralized Office Illumination System<br>Arduino, Raspberry Pi, CAN Bus, C++ boost, Sockets<br>University project
+						</div>
+					</a>
+				
+				
+				
+					<a  href="https://github.com/miguelfazenda/DistributedKeyValueStore"  class="project-item">
+						 <img src="imgs/projects/PSIS.png" class="project-img" style="width:100%;"> 
+						
+						
+						<div class="project-item-desc">
+							Distributed Key-Value Store<br>C, Unix, Sockets<br>University project
+						</div>
+					</a>
+				
+				
+				
+					<a  class="project-item">
+						 <img src="imgs/projects/PIV.png" class="project-img" style="width:100%;"> 
+						
+						
+						<div class="project-item-desc">
+							3D scene rescontruction from RGBd images<br>MATLAB, Computer vision<br>University project
+						</div>
+					</a>
+				
+				
+				
+					<a  class="project-item">
+						 <img src="imgs/projects/pacman.png" class="project-img" style="width:100%;"> 
+						
+						
+						<div class="project-item-desc">
+							Pacman game in Assembly<br><br>University project
+						</div>
+					</a>
+				
+				
+				
+					<a  href="http://iefatura.tws.pt/"  class="project-item">
+						 <img src="imgs/projects/iefatura.png" class="project-img" style="width:100%;"> 
+						
+						
+						<div class="project-item-desc">
+							IE-Fatura<br>Data-scraping software sold to accounts<br>C#, Winforms<br>
+						</div>
+					</a>
+				
+				
+				
+					<a  class="project-item">
+						
+						 <video src="imgs/projects/neecaton.mp4" class="video-autoplay" style="width:100%; " muted loop playsinline></video>
+						 <span class="video-autoplay-symbol">🎥</span> 
+						<div class="project-item-desc">
+							Self-balancing table<br>Arduino, 3D printing<br>24-hour Hackaton project
+						</div>
+					</a>
+				
+				
+			</div>
+			<a class="btn" href="projects.html">
+				See more stuff I've made
+			</a>
+		</div>
+
+		<!--<div>
+			<h2>Technologies I'm familiar with:</h2>
+			<div id="tech-list">
+				<div><img src="1280px-Arduino_Logo.svg.png"><br>Microcontroler programming: Arduino and ESP32</div>
+				<div><img src="cpp.svg"><br>Intermediate knowledge of C++, including modern C++ features</div>
+				<div><img src="c-sharp-c-seeklogo.com.svg"></div>
+				<div><img src="Java-logo.png"></div>
+				<div><img src="1024px-HTML5_logo_and_wordmark.svg.png"></div>
+				<div><img src="kisspng-microsoft-sql-server-mysql-database-logo-5b098c6ee92a46.0488681015273524309551.png"></div>
+				<div><img src="Android_symbol_green_RGB.svg"></div>
+				<div><img src="imgs/tech/linux.png"></div>
+				
+				
+			</div>
+			
+			FPGA
+		</div>-->
+		
+		<h2>Want to know more about me professionaly?</h2>
+		<a class="btn" href="">
+			Download my CV
+		</a>
+		
+		
+		<!--<p>
+			Administration of a company’s server. Windows machine with an SQL Server, SQL CE on PDA’s for sales, and IIS.
+			Also developed several tools in C# that help with tasks on sales and accounting software. CCTV configuration.
+		</p>-->
+	</div>
+
+	<h1 style="text-align: center;" id="pictures">Photos I've taken</h1>
+	<div id="pics">
+		<div class="pic">
+			<img src="imgs/pics/azenhas.jpg"/>
+			<div class="pic-desc">
+				<a href="https://goo.gl/maps/nQRJt76jqMDMaD4q8" target="_blank">Azenhas do Mar</a> - September 2020
+			</div>
+		</div>
+		<div class="pic">
+			<img src="imgs/pics/comboio.jpg"/>
+			<div class="pic-desc">
+				<a href="https://goo.gl/maps/qYqXS6YJtqGXAo3k9" target="_blank">Vale de Figueira</a> - January 2019
+			</div>
+		</div>
+		<div class="pic">
+			<img src="imgs/pics/bode.jpg"/>
+			<div class="pic-desc">
+				<a href="https://goo.gl/maps/1wopXopPPVYSDdBX6"  target="_blank">Castelo de bode</a> - June 2021
+			</div>
+		</div>
+		<div class="pic">
+			<img src="imgs/pics/melides.jpg"/>
+			<div class="pic-desc">
+				<a href="https://goo.gl/maps/KDpG4r6xeGAFjhci8" target="_blank">Melides</a> - August 2019
+			</div>
+		</div>
+		<div class="pic">
+			<img src="imgs/pics/stars.jpg"/>
+			<div class="pic-desc">
+				Night sky - September 2020
+			</div>
+		</div>
+	</div>
+
+	<!--<script>
+		let blink_element = document.getElementById("blink");
+
+		var intervalId = window.setInterval(function(){
+			let currently_hidden = blink_element.style.display == "none";
+			blink_element.style.display = currently_hidden ? "inline" : "none";
+		}, 700);
+	</script>-->
+	<script src="autoplay.js"></script>
+	
+</body>
+
+</html>

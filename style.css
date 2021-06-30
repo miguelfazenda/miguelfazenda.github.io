@@ -1,0 +1,292 @@
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+}
+
+html {
+	scroll-behavior: smooth;
+  }
+
+body
+{
+	margin: 0 !important;
+	padding: 0 !important;
+	margin: 0px;
+	line-height: 1.6;
+	font-size: 18px;
+	color: #444;
+	background-color: #f5f6f7;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#content
+{
+ 	top: 4rem;
+	padding: 0 10px;
+	margin: 40px auto;
+	max-width: 55%;
+}
+
+@media screen and (max-width: 1000px) {
+	#content
+	{
+		max-width: 80%;
+	}
+}
+
+/*#tech-list
+{
+	list-style-type: none;
+}
+
+#tech-list > li > img
+{
+	width: 3rem;
+}*/
+
+#tech-list
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+#tech-list > div
+{
+	background-color: white;
+	flex: 1 1 0px;
+	min-width: 15rem;
+	padding: 1rem;
+	margin: 0.5rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.05);
+}
+
+#tech-list img
+{
+	width: 3rem;
+}
+
+#intro
+{
+	
+}
+
+#fundo {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	color: white;
+	height: 60vh;
+	max-height: 60vh;
+	min-height: 25rem;
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)
+	  ), url('imgs/fundo.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: center;
+}
+
+#inner-background {
+    position: relative; top: 50%;
+    display: block;
+    text-align: center;
+}
+
+#inner-background h1 {
+	/*color: rgb(235, 235, 235);*/
+	color: yellow;
+	background-color: black;
+	width: 20rem;
+}
+
+#dummy-code {
+	text-align: left;
+	background-color: #1E1E1E;
+	width: min-content;
+	padding: 1rem;
+}
+
+#menu
+{
+	position: absolute;
+	top: 1em;
+	right: 1em;
+}
+
+#menu a
+{
+	color: inherit;
+	text-decoration: none;
+}
+
+#my-photos
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.my-photo
+{
+	max-width: 100%;
+	max-height: 15rem;
+	margin: 0.5rem;
+}
+
+/* Project list */
+
+.project-list-container {
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	/*gap: 4rem;*/
+}
+
+.project-item {
+    flex: 1 0 40%;
+    height: max-content;
+	margin: 1rem;
+	
+	text-decoration: none;
+	position: relative;
+	
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: bounceIn;
+	animation-name: bounceIn;
+
+	transition: all .2s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+	.project-item {
+		flex: 1 0 100%;
+	}
+}
+
+.project-item:hover { transform: scale(1.1); }
+
+.project-item-desc
+{
+	position: absolute;
+	bottom: 4em;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	font-size: 0.8em;
+	color: white;
+	margin-bottom: -4em;
+}
+
+
+/* Pics */
+#pics {
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	padding-bottom: 4rem;
+}
+
+#pics > div > img
+{
+	width: 100%;
+}
+
+#pics > div 
+{
+	width: 40%;
+	margin: 1rem;
+	position: relative;
+}
+
+.pic-desc
+{
+	position: absolute;
+	bottom: -1rem;
+
+	background-color: black;
+	color: white;
+	padding: 0.5rem;
+}
+.pic-desc > a
+{
+	color: white;
+}
+
+@media screen and (max-width: 1000px) {
+	#pics
+	{
+		padding-bottom: 0rem;
+	}
+	
+	#pics > div
+	{
+		width: 100%;
+    	height: auto;
+    	margin: 0rem;
+	}
+	.pic-desc
+	{
+		bottom: 0rem;
+	}
+}
+
+@keyframes bounceIn {
+	0% { 
+	   opacity: 0; 
+	   transform: scale(.9);
+	}
+	50% { 
+	   opacity: 1;
+	   transform: scale(1.05);
+	}
+	70% {
+	   transform: scale(.9);
+	}
+	100% {
+	   transform: scale(1);
+	}
+ } 
+
+.btn
+{
+	display: block;
+	padding: 0.5em;
+	text-align: center;
+	border-style: solid;
+	border-width: 2px;
+	width: max-content;
+	margin: auto;
+	margin-top: 1rem;
+
+	color: inherit;
+	text-decoration: none;
+	
+	transition: all .2s ease-in-out;
+}
+
+.btn:hover { transform: scale(1.05); }
+
+.video-autoplay-symbol
+{
+	z-index: 2;
+	position: absolute;
+	top: 0.7px;
+	right: 0.3em;
+	color: white;
+	font-size: 2em;
+}
+
+video {
+    object-fit:fill;
+}
