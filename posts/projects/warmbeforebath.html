@@ -1,0 +1,64 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../style.css" />
+	<link rel="stylesheet" href="../../article.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+	
+	<title>Warm Before Bath project</title>
+
+	<meta property="og:description" name="description" content="<p>lorem ipsum dolor</p>">
+	<meta name="keywords" content="">
+	<meta name="author" content="Miguel Fazenda">
+</head>
+
+<body>
+	<div id="content">
+		<div id="navbar">
+			<div id="navbar-logo" ><a href="../../">Miguel Fazenda</a></div>
+			<div id="navbar-menu">
+				<a href="../../">Home</a>
+			</div>
+		</div>
+
+		
+
+		<article>
+			<h1>Warm Before Bath</h1>
+
+            Date: 2018
+
+			<div id="tags">
+				Topics: 
+					<span>Arduino</span>
+					<span>LCD</span>
+					<span>Challenge</span>
+                    <span>Heater</span>
+			</div>
+			<a href="https://github.com/joseafonsoneves/WarmBeforeBath">GitHub repository</a>
+			<br>
+	
+			<br>
+
+            <p>After joining university, me and my great friend José Néves participated in a challenge to create a project using an Arduino.</p>
+			
+			<p>We won the Honorable Mention (2nd place) with our project, Warm Before Bath. It consists of a device that lets users program that they usually take a shower, and it will turn on a heater a few minutes before that time. </p>
+            
+            <p>It had an LCD and buttons, where the user can navigate through the interface. The time was kept with a Arduino compatible RTC (real-time clock), and the settings stored in an external EEPROM.
+            A relay was used to turn on the heater, and a temperature sensor detects when the desired temperature is reached.</p>
+
+			<p>We were very proud of our project, even if it was not the most complex or innovative. The prize of the challenge was an intership at <a href="https://www.thalesgroup.com/en">Thales</a>.</p>
+
+            <h3>Learnings</h3>
+
+			<p>The main challenge with this project was implementing all the features, while using the Arduino's limited resources. We had to optimize the code quite a bit, and compromise on some things, as the Arduino's RAM is not very big.</p>
+            
+			<p>For example, in Arduino there is a function "F(str)", that stores a string in the flash memory instead of the RAM. This is useful when you have a lot of strings, as the RAM is very limited.</p>
+
+		</article>
+	</div>
+</body>
+
+</html>
