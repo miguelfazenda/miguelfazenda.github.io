@@ -49,3 +49,46 @@ code
     color: white;
     padding: 0.25em;
 }
+
+article
+{
+    color: black;
+}
+
+
+
+.imgs-sideby-side
+{
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+    
+
+}
+
+.imgs-sideby-side > div
+{
+    margin: 0.5em;
+    flex: 0 1 40%;
+    width: 40%;
+    height: auto;
+}
+.imgs-sideby-side > div > img
+{
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .imgs-sideby-side
+    {
+        flex-direction: column;
+    }
+
+    .imgs-sideby-side > div
+    {
+        width: 100%;
+    }
+}

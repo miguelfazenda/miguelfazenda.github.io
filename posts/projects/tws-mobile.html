@@ -1,0 +1,134 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../style.css" />
+	<link rel="stylesheet" href="../../article.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+
+	<title>TWS Mobile</title>
+
+	<meta property="og:description" name="description" content="<p>lorem ipsum dolor</p>">
+	<meta name="keywords" content="">
+	<meta name="author" content="Miguel Fazenda">
+</head>
+
+<body>
+	<div id="content">
+		<div id="navbar">
+			<div id="navbar-logo"><a href="../../">Miguel Fazenda</a></div>
+			<div id="navbar-menu">
+				<a href="../../">Home</a>
+			</div>
+		</div>
+
+
+		<article>
+			<h1>TWS Mobile</h1>
+
+			Date: 2022 (I still update it once in a while)
+
+			<div id="tags">
+				Topics:
+				<span>C#</span>
+                <span>SQL</span>
+                <span>Svelte</span>
+                <span>Android</span>
+			</div>
+			
+			<br>
+			<br>
+
+            <h2>Introduction</h2>
+
+            <p>I was approached by a company which sells products and registers sales on really old windows mobile PDAs. This is because they use an invoicing and accounting software called wintouch. They have mostly stopped developing this mobile version, and focuses on the desktop and cloud version.</p>
+
+            The use of these outdated devices was a problem for the company for multiple reasons:
+            <ul>
+                <li>They had to have an insecure version of SQL server CE on the server, exposed to the internet, and it was not simple to configure a VPN.</li>
+                <li>The devices were not that easy or cheap to buy</li>
+                <li>The Bluetooth receipt printers compatible with the software were very expensive</li>
+            </ul>
+
+            <p>
+                This company searched for alternatives in the market, but it was had to find a software that had all the features they relied on, and that allowed for sales to be done even without internet connection.
+            </p>
+
+
+
+
+
+
+            <h2>Tech solution</h2>
+            <p>
+                As such I developed TWS mobile, an app where the seller can register the sale and print an invoice. The app is connected to a REST server written in C#, which is connected to the company's invoicing program.
+            </p>
+            <p>
+                I chose to write the app in JavaScript and HTML, using <a href="https://svelte.dev/">Svelte</a> both because it was a technology I wanted to learn, and because it is lightweight compared to frameworks like React. But the main reason was that I wanted to have a fast development cycle, and writing code with Android SDK is much more time consuming, and performance was not the main concern in this app.
+                Svelte is a web framework, so to package the app to run on Android, I used <a href="https://cordova.apache.org/">Cordova</a>. It was extremely helpful to be able to run and debug the app directly on the browser, and then just run a command to package it to Android.
+            </p>
+            <p>
+                For the app to comunicate with the server without having it exposed to the internet, I use the VPN <a href="https://tailscale.com/">Tailscale</a>, which is very easy to configure, and has a free tier.
+            </p>
+
+            <h2>Features</h2>
+                <ul>
+                    <li>
+                        Register sales, returns, routes, payments, and cargo loading/unloading from the warehouse to vehicles.
+                    </li>
+                    <li>
+                        Track the stock of the seller's vehicle.
+                    </li>
+                    <li>
+                        The app can work offline, and sync the sales when it has internet connection.
+                    </li>
+                    <li>
+                        Print invoices to bluetooth receipt printers, including QR codes.
+                    </li>
+                    <li>
+                        View the list of customers, and create and edit. The app can also show the customer's balance.
+                    </li>
+
+                </ul>
+
+
+
+
+
+
+
+            <h2>Printers</h2>
+            <p>
+                The company now can use cheaper models of bluetooth receipt printers, and easiliy find replacements (image 3).
+            </p>
+            <p>
+                I used the library <a href="https://www.npmjs.com/package/cordova-plugin-bluetooth-serial">cordova-plugin-bluetooth-serial</a>, and learnt how the <a href="https://download4.epson.biz/sec_pubs/pos/reference_en/escpos/index.html">ESC/POS Commands work</a>, which is the standard for this kind of printers.
+                The most challenging part was implementing the printing of QR codes: In some printers, you can simply send a command to let the printer know the next data is a QR code, and then send the data. I found that not all printers support this, and I had to implement a way to convert the QR code to an image, and then send the image to the printer.
+            </p>
+
+			<br><br>
+
+            <div class="imgs-sideby-side">
+                <div>
+                    <img src="/imgs/projects/tws-mobile/tws-mobile-mainpage.png" alt="">
+                    <p>Main page</p>
+                </div>
+                <div>
+                    <img src="/imgs/projects/tws-mobile/tws-mobile-fatura.png" alt="">
+                    <p>Invoice creation</p>
+                </div>
+                <div>
+                    <img src="/imgs/projects/tws-mobile/thermalprinter.webp" alt="">
+                    <p>Printer example</p>
+                </div>
+            </div>
+
+		</article>
+
+		<br>
+		<a href="/posts/projects/">← See other projects</a>
+	</div>
+</body>
+
+</html>
